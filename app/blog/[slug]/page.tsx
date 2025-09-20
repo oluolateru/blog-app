@@ -37,6 +37,19 @@ async function getArticleBySlug(slug: string) {
   return article[0] || null
 }
 
+export async function generateStaticParams() {
+  const allArticles = await db
+    .select({
+      slug: articles.slug,
+    })
+    .from(articles)
+    .where(eq(articles.isPublished, true))
+
+  return allArticles.map((article) => ({
+    slug: article.slug,
+  }))
+}
+
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params
   const article = await getArticleBySlug(slug)

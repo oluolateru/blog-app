@@ -1,5 +1,3 @@
-"use client";
-
 export function Footer() {
   return (
     <footer className="bg-sidebar text-sidebar-foreground mt-16">

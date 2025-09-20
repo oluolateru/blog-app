@@ -1,35 +1,35 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
-export function Preloader() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
+export function ClientPreloader() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     // Simulate loading progress
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          clearInterval(progressInterval);
-          return 100;
+          clearInterval(progressInterval)
+          return 100
         }
-        return prev + Math.random() * 15;
-      });
-    }, 100);
+        return prev + Math.random() * 15
+      })
+    }, 100)
 
     // Hide preloader after content loads
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+      setIsLoading(false)
+    }, 2000)
 
     return () => {
-      clearTimeout(timer);
-      clearInterval(progressInterval);
-    };
-  }, []);
+      clearTimeout(timer)
+      clearInterval(progressInterval)
+    }
+  }, [])
 
-  if (!isLoading) return null;
+  if (!isLoading) return null
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-background">
@@ -42,12 +42,8 @@ export function Preloader() {
 
         {/* Loading text */}
         <div className="text-center">
-          <h2 className="text-xl font-semibold text-foreground mb-2">
-            Blog App
-          </h2>
-          <p className="text-sm text-muted-foreground animate-pulse">
-            Loading amazing content...
-          </p>
+          <h2 className="text-xl font-semibold text-foreground mb-2">Modern Blog</h2>
+          <p className="text-sm text-muted-foreground animate-pulse">Loading amazing content...</p>
         </div>
 
         {/* Progress bar */}
@@ -59,10 +55,8 @@ export function Preloader() {
         </div>
 
         {/* Progress percentage */}
-        <p className="text-xs text-muted-foreground font-mono">
-          {Math.round(Math.min(progress, 100))}%
-        </p>
+        <p className="text-xs text-muted-foreground font-mono">{Math.round(Math.min(progress, 100))}%</p>
       </div>
     </div>
-  );
+  )
 }
