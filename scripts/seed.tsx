@@ -46,7 +46,6 @@ async function seed() {
       publishDate: "2025-09-19",
       isPublished: true,
     },
-
     {
       title: "Far far away, behind the word mountains",
       slug: "far-far-away-behind-the-word-mountains",
@@ -56,7 +55,6 @@ async function seed() {
       publishDate: "2025-09-19",
       isPublished: true,
     },
-
     {
       title: "Far far away, behind the word mountains 2",
       slug: "far-far-away-behind-the-word-mountains-2",
