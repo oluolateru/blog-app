@@ -109,22 +109,22 @@ A Blog App application built with Next.js 14, TypeScript, and Drizzle ORM.
 
 ## Project Structure
 
-\`\`\`
-├── app/ # Next.js App Router pages
-│ ├── blog/ # Blog routes
-│ │ ├── [slug]/ # Dynamic article pages
-│ │ └── page.tsx # Blog listing page
-│ ├── globals.css # Global styles and design tokens
-│ ├── layout.tsx # Root layout
-│ └── page.tsx # Home page
-├── components/ # Reusable UI components
-│ └── ui/ # shadcn/ui components
-├── lib/ # Utility functions and configurations
-│ └── db/ # Database configuration and schema
-├── scripts/ # Database scripts
-├── **tests**/ # Test files
+```plaintext
+├── app/                     # Next.js App Router pages
+│   ├── blog/                # Blog routes
+│   │   ├── [slug]/          # Dynamic article pages
+│   │   └── page.tsx         # Blog listing page
+│   ├── globals.css          # Global styles and design tokens
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Home page
+├── components/              # Reusable UI components
+│   └── ui/                  # shadcn/ui components
+├── lib/                     # Utility functions and configurations
+│   └── db/                  # Database configuration and schema
+├── scripts/                 # Database scripts
+├── __tests__/               # Test files
 └── README.md
-\`\`\`
+
 
 ## Features Implemented
 
