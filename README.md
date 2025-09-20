@@ -124,7 +124,7 @@ A Blog App application built with Next.js 14, TypeScript, and Drizzle ORM.
 ├── scripts/                 # Database scripts
 ├── __tests__/               # Test files
 └── README.md
-
+```
 
 ## Features Implemented
 
